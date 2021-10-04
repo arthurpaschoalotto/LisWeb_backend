@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pacientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Data nascimento</th>
+      <th>Rg</th>
+      <th>Cpf</th>
+      <th>Sexo</th>
+      <th>Cor</th>
+      <th>Nome mae</th>
+      <th>Nome pai</th>
+      <th>Cep</th>
+      <th>Localidade</th>
+      <th>Uf</th>
+      <th>Ibge</th>
+      <th>Logradouro</th>
+      <th>Complemento</th>
+      <th>Bairro</th>
+      <th>Numero</th>
+      <th>Convenio</th>
+      <th>Titular conv</th>
+      <th>Carteirinha conv</th>
+      <th>Validade conv</th>
+      <th>Cns conv</th>
+      <th>Receber infadc</th>
+      <th>Receber email</th>
+      <th>Receber sms</th>
+      <th>Observacao</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Celular</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pacientes.each do |paciente| %>
+      <tr>
+        <td><%= paciente.nome %></td>
+        <td><%= paciente.data_nascimento %></td>
+        <td><%= paciente.rg %></td>
+        <td><%= paciente.cpf %></td>
+        <td><%= paciente.sexo %></td>
+        <td><%= paciente.cor %></td>
+        <td><%= paciente.nome_mae %></td>
+        <td><%= paciente.nome_pai %></td>
+        <td><%= paciente.cep %></td>
+        <td><%= paciente.localidade %></td>
+        <td><%= paciente.uf %></td>
+        <td><%= paciente.ibge %></td>
+        <td><%= paciente.logradouro %></td>
+        <td><%= paciente.complemento %></td>
+        <td><%= paciente.bairro %></td>
+        <td><%= paciente.numero %></td>
+        <td><%= paciente.convenio %></td>
+        <td><%= paciente.titular_conv %></td>
+        <td><%= paciente.carteirinha_conv %></td>
+        <td><%= paciente.validade_conv %></td>
+        <td><%= paciente.cns_conv %></td>
+        <td><%= paciente.receber_infadc %></td>
+        <td><%= paciente.receber_email %></td>
+        <td><%= paciente.receber_sms %></td>
+        <td><%= paciente.observacao %></td>
+        <td><%= paciente.telefone %></td>
+        <td><%= paciente.email %></td>
+        <td><%= paciente.celular %></td>
+        <td><%= link_to 'Show', paciente %></td>
+        <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
+        <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paciente', new_paciente_path %>

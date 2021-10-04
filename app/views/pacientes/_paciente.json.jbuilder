@@ -1,0 +1,2 @@
+json.extract! paciente, :id, :nome, :data_nascimento, :rg, :cpf, :sexo, :cor, :nome_mae, :nome_pai, :cep, :localidade, :uf, :ibge, :logradouro, :complemento, :bairro, :numero, :convenio, :titular_conv, :carteirinha_conv, :validade_conv, :cns_conv, :receber_infadc, :receber_email, :receber_sms, :observacao, :telefone, :email, :celular, :created_at, :updated_at
+json.url paciente_url(paciente, format: :json)

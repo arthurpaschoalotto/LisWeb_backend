@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  data_nascimento: 2021-09-16
+  rg: MyString
+  cpf: MyString
+  sexo: MyString
+  cor: MyString
+  nome_mae: MyString
+  nome_pai: MyString
+  cep: 1
+  localidade: MyString
+  uf: MyString
+  ibge: 1
+  logradouro: MyString
+  complemento: MyString
+  bairro: MyString
+  numero: 1
+  convenio: MyString
+  titular_conv: MyString
+  carteirinha_conv: MyString
+  validade_conv: 2021-09-16
+  cns_conv: MyString
+  receber_infadc: false
+  receber_email: false
+  receber_sms: false
+  observacao: MyText
+  telefone: MyString
+  email: MyString
+  celular: MyString
+
+two:
+  nome: MyString
+  data_nascimento: 2021-09-16
+  rg: MyString
+  cpf: MyString
+  sexo: MyString
+  cor: MyString
+  nome_mae: MyString
+  nome_pai: MyString
+  cep: 1
+  localidade: MyString
+  uf: MyString
+  ibge: 1
+  logradouro: MyString
+  complemento: MyString
+  bairro: MyString
+  numero: 1
+  convenio: MyString
+  titular_conv: MyString
+  carteirinha_conv: MyString
+  validade_conv: 2021-09-16
+  cns_conv: MyString
+  receber_infadc: false
+  receber_email: false
+  receber_sms: false
+  observacao: MyText
+  telefone: MyString
+  email: MyString
+  celular: MyString

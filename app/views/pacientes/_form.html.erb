@@ -1,0 +1,157 @@
+<%= form_with(model: paciente) do |form| %>
+  <% if paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+        <% paciente.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_nascimento %>
+    <%= form.date_select :data_nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rg %>
+    <%= form.text_field :rg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sexo %>
+    <%= form.text_field :sexo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cor %>
+    <%= form.text_field :cor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_mae %>
+    <%= form.text_field :nome_mae %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_pai %>
+    <%= form.text_field :nome_pai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.number_field :cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localidade %>
+    <%= form.text_field :localidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uf %>
+    <%= form.text_field :uf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ibge %>
+    <%= form.number_field :ibge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :logradouro %>
+    <%= form.text_field :logradouro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :complemento %>
+    <%= form.text_field :complemento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.text_field :bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.number_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :convenio %>
+    <%= form.text_field :convenio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titular_conv %>
+    <%= form.text_field :titular_conv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carteirinha_conv %>
+    <%= form.text_field :carteirinha_conv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :validade_conv %>
+    <%= form.date_select :validade_conv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cns_conv %>
+    <%= form.text_field :cns_conv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receber_infadc %>
+    <%= form.check_box :receber_infadc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receber_email %>
+    <%= form.check_box :receber_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receber_sms %>
+    <%= form.check_box :receber_sms %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacao %>
+    <%= form.text_area :observacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
