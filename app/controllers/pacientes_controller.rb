@@ -3,16 +3,21 @@ class PacientesController < ApplicationController
 
   # GET /pacientes or /pacientes.json
   def index
+    # TODO: #1 Nao deixar logs no codigo final
     Rails.logger.info params['nome']
+    # TODO: #2 Despersonificar @pacientes, ajuda na heranca
     @pacientes = Paciente.all
     cpf = params['cpf'].delete('^0-9') unless params['cpf'].blank?
     rg = params['rg'].delete('^0-9') unless params['rg'].blank?
+    # TODO: #3 Deixar a parte de busca mais dinamica, com um loop?
+    # TODO: #4 Usar uma gem para cuidar da busca?
     @pacientes = @pacientes.where('nome LIKE ?', "%#{params['nome']}%") unless params['nome'].blank?
     @pacientes = @pacientes.where('cpf LIKE ?', "#{cpf}%") if cpf
     @pacientes = @pacientes.where('rg LIKE ?', "#{rg}%") if rg
     @pacientes = @pacientes.where('nome_mae LIKE ?', "#{params['nome_mae']}%") unless params['nome_mae'].blank?
     @pacientes = @pacientes.where('nome_pai LIKE ?', "#{params['nome_pai']}%") unless params['nome_pai'].blank?
 
+    # TODO: #5 Usar uma gem para paginacao?
     page = params['page'].to_i
     @pacientes = @pacientes.limit(2)
     @pacientes = @pacientes.offset((page*2)-2) if page > 1
